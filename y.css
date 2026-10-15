@@ -1,0 +1,296 @@
+/* ===== GLOBAL RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #6238d5;
+    --blue: #329cf5;
+    --dark: #191746;
+    --muted: #777994;
+    --border: #e2e4ff;
+    --light: #f5f5ff;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #f8f7ff, #edf5ff);
+    color: var(--dark);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ===== TOP HEADER ===== */
+#header {
+    min-height: 78px;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(110deg, #7540e9, #278ff0);
+    box-shadow: 0 5px 22px #4930a526;
+    position: relative;
+}
+
+#header::before {
+    content: "✚  Cancer Detection";
+    color: white;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+/* ===== NAVIGATION ===== */
+#fakeheader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 20px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+}
+
+#fakeheader a {
+    display: inline-block;
+    padding: 9px 20px;
+    background: #f0edff !important;
+    color: #4930a5;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#fakeheader a:hover {
+    color: white;
+    background: var(--purple) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px #6238d533;
+}
+
+/* ===== MAIN TITLES ===== */
+body > h1 {
+    text-align: center;
+    margin: 35px 15px 5px;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #24205c;
+}
+
+body > h2 {
+    text-align: center;
+    margin: 10px 15px 30px;
+    font-size: clamp(20px, 3vw, 28px);
+    color: var(--purple);
+}
+
+/* ===== PATIENT FORM CARD ===== */
+#box1 {
+    width: min(900px, 92%);
+    margin: 0 auto 30px;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px #30277b12;
+    line-height: 2.4;
+    transition: box-shadow 0.3s ease;
+}
+
+#box1:hover {
+    box-shadow: 0 15px 45px #30277b1c;
+}
+
+#utkarsh {
+    color: var(--purple);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* ===== INPUT FIELDS ===== */
+#box1 input {
+    width: min(100%, 340px);
+    min-height: 44px;
+    margin: 5px 8px 12px 10px;
+    padding: 11px 14px;
+    border: 1px solid #d9d8f4;
+    border-radius: 9px;
+    background: #fafaff;
+    color: var(--dark);
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.4;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+#box1 input::placeholder {
+    color: #9999b5;
+}
+
+#box1 input:focus {
+    background: white;
+    border-color: #7953e6;
+    box-shadow: 0 0 0 4px #7953e61c;
+}
+
+#box1 input:hover {
+    border-color: #aaa0ed;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+#pk {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(100deg, #7540e9, #329cf5);
+    color: white;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 750;
+    cursor: pointer;
+    box-shadow: 0 7px 18px #6238d52b;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#pk:hover {
+    background: linear-gradient(100deg, #5429c4, #197bd7);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px #6238d540;
+}
+
+#pk:active {
+    transform: scale(0.98);
+}
+
+/* ===== PREDICTION RESULT CARD ===== */
+#hen {
+    width: min(900px, 92%);
+    margin: 0 auto 20px;
+    padding: 28px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px #30277b10;
+    overflow-wrap: anywhere;
+}
+
+#hen h2,
+#hen h3,
+#hen h4 {
+    margin-bottom: 10px;
+    color: var(--purple);
+}
+
+#hen h2 {
+    font-size: 24px;
+}
+
+#hen h3 {
+    font-size: 18px;
+}
+
+#hen p {
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+/* ===== RESULT OUTPUT ===== */
+#result {
+    width: min(900px, 92%);
+    margin: 0 auto 30px;
+}
+
+.result-card {
+    padding: 25px;
+    margin-top: 20px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 8px 28px #25204412;
+}
+
+.result-card h2 {
+    color: var(--purple);
+    margin-bottom: 8px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 22px 15px;
+    text-align: center;
+    background: #211b50;
+    color: #eeebff;
+    font-size: 13px;
+    margin-top: 35px;
+}
+
+.disclaimer {
+    width: min(900px, 92%);
+    margin: 20px auto;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 600px) {
+    #header {
+        justify-content: center;
+        padding: 18px 10px;
+    }
+
+    #header::before {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    #fakeheader {
+        gap: 8px;
+        padding: 12px 8px;
+    }
+
+    #fakeheader a {
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+    body > h1 {
+        margin-top: 28px;
+    }
+
+    #box1 {
+        width: 94%;
+        padding: 22px 16px;
+    }
+
+    #box1 input {
+        width: 100%;
+        margin: 5px 0 12px;
+    }
+
+    #hen {
+        width: 94%;
+        padding: 20px 16px;
+    }
+
+    #result {
+        width: 94%;
+    }
+
+    #pk {
+        padding: 14px;
+    }
+}
